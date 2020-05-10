@@ -77,46 +77,42 @@ class MultiPlayerVC: UIViewController {
         return true
     }
     
+    
     override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
         if motion == .motionShake {
             
             if motionGestureEnabled {
-                motionGestureEnabled = false
-                
-                playerOneSliderValueLabel.isHidden = true
-                playerTwoSliderValueLabel.isHidden = true
-                
-                playerOneLabel.text = "1"
-                playerTwoLabel.text = "2"
-                
-                playerOneSlider.isEnabled = true
-                playerOneSlider.setValue(500, animated: true)
-                playerTwoSlider.isEnabled = true
-                playerTwoSlider.setValue(500, animated: true)
-                
-                featuresPlayerOne.vibrateDevice()
-                
-                playerOneRandomGeneratedNumber = featuresPlayerOne.levelSelection(level: level)
-                playerTwoRandomGeneratedNumber = featuresPlayerTwo.levelSelection(level: level)
-                
-                playerOneRandomNumber.text = String(playerOneRandomGeneratedNumber)
-                playerTwoRandomNumber.text = String(playerTwoRandomGeneratedNumber)
-                featuresPlayerOne.shakeDeviceSound()
-                
-                counterPlayerOne = 15
-                counterPlayerTwo = 15
-                completionCounter = 0
-                
-                //Starts Count Down
-                featuresPlayerOne.startTimer(selector: #selector(updateCounterPlayerOne),target: self)
-                featuresPlayerTwo.startTimer(selector: #selector(updateCounterPlayerTwo),target: self)
-                
-                //Enables the Check Button
-                playerOneCheckButton.isEnabled = true
-                playerTwoCheckButton.isEnabled = true
+                operationOnMontionGesture()
             }
             
         }
+    }
+    
+    fileprivate func operationOnMontionGesture() {
+        motionGestureEnabled = false
+        playerOneSliderValueLabel.isHidden = true
+        playerTwoSliderValueLabel.isHidden = true
+        playerOneLabel.text = Constants.playerOne
+        playerTwoLabel.text = Constants.playerTwo
+        playerOneSlider.isEnabled = true
+        playerOneSlider.setValue(500, animated: true)
+        playerTwoSlider.isEnabled = true
+        playerTwoSlider.setValue(500, animated: true)
+        featuresPlayerOne.vibrateDevice()
+        playerOneRandomGeneratedNumber = featuresPlayerOne.levelSelection(level: level)
+        playerTwoRandomGeneratedNumber = featuresPlayerTwo.levelSelection(level: level)
+        playerOneRandomNumber.text = String(playerOneRandomGeneratedNumber)
+        playerTwoRandomNumber.text = String(playerTwoRandomGeneratedNumber)
+        featuresPlayerOne.shakeDeviceSound()
+        counterPlayerOne = 15
+        counterPlayerTwo = 15
+        completionCounter = 0
+        //Starts Count Down
+        featuresPlayerOne.startTimer(selector: #selector(updateCounterPlayerOne),target: self)
+        featuresPlayerTwo.startTimer(selector: #selector(updateCounterPlayerTwo),target: self)
+        //Enables the Check Button
+        playerOneCheckButton.isEnabled = true
+        playerTwoCheckButton.isEnabled = true
     }
     @IBAction func playerOneCheckButtonPressed(_ sender: Any) {
         scoreCheckFunctionPlayerOne()
@@ -167,7 +163,7 @@ class MultiPlayerVC: UIViewController {
         
         if completionCounter == 2 {
             motionGestureEnabled = true
-            checkWhoWon()
+            checkWinner()
         }
         
     }
@@ -185,27 +181,27 @@ class MultiPlayerVC: UIViewController {
         
         if completionCounter == 2 {
             motionGestureEnabled = true
-            checkWhoWon()
+            checkWinner()
         }
         
     }
     
-    func checkWhoWon() {
+    func checkWinner() {
         playerOneSliderValueLabel.isHidden = false
-        playerOneSliderValueLabel.text = "Your Prediction : \(Int(playerOneSlider.value))"
+        playerOneSliderValueLabel.text = "\(Constants.yourPrediction) \(Int(playerOneSlider.value))"
         playerTwoSliderValueLabel.isHidden = false
-        playerTwoSliderValueLabel.text = "Your Prediction : \(Int(playerTwoSlider.value))"
+        playerTwoSliderValueLabel.text = "\(Constants.yourPrediction) \(Int(playerTwoSlider.value))"
         
         if playerOneScore > playerTwoScore {
-            playerOneLabel.text = "Won"
-            playerTwoLabel.text = "Lost"
+            playerOneLabel.text = Constants.won
+            playerTwoLabel.text = Constants.lost
         } else if playerTwoScore > playerOneScore {
-            playerOneLabel.text = "Lost"
-            playerTwoLabel.text = "Won"
+            playerOneLabel.text = Constants.lost
+            playerTwoLabel.text = Constants.won
         } else if playerOneScore == playerTwoScore {
             if playerOneScore != 0 {
-                playerOneLabel.text = "Draw"
-                playerTwoLabel.text = "Draw"
+                playerOneLabel.text = Constants.draw
+                playerTwoLabel.text = Constants.draw
             }
         }
     }

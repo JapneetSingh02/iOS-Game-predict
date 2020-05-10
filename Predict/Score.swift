@@ -10,9 +10,7 @@ import Foundation
 
 class Score {
     static let instance = Score()
-    
     var currentScore : Float = 00
-    
     var level : Levels = Levels.Easy
     
     func calculateScore(sliderNumber : Float, randomGeneratedNumber : Int, timeRemaining : Int, totalTime : Int) -> Int{
