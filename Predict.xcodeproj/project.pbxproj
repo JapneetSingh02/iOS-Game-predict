@@ -48,6 +48,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F4258FB2467D8AE00051A38 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9752F87D23FB0F1800360EF1 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3F4258FC2467D8C500051A38 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9742B7B523FC4E1200ADFC05 /* AboutVC.swift */,
+				970C569F23FD28E50009B0F3 /* MultiPlayerVC.swift */,
+				9752F87B23FB0F1800360EF1 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		9752F86B23FB0F1800360EF1 = {
 			isa = PBXGroup;
 			children = (
@@ -67,18 +85,16 @@
 		9752F87623FB0F1800360EF1 /* Predict */ = {
 			isa = PBXGroup;
 			children = (
+				3F4258FC2467D8C500051A38 /* Controller */,
+				3F4258FB2467D8AE00051A38 /* View */,
 				9752F88D23FB8C0600360EF1 /* Predict.entitlements */,
 				9752F87723FB0F1800360EF1 /* AppDelegate.swift */,
 				9752F87923FB0F1800360EF1 /* SceneDelegate.swift */,
-				9752F87B23FB0F1800360EF1 /* ViewController.swift */,
-				9752F87D23FB0F1800360EF1 /* Main.storyboard */,
 				9752F88023FB0F1A00360EF1 /* Assets.xcassets */,
 				9752F88223FB0F1A00360EF1 /* LaunchScreen.storyboard */,
 				9752F88523FB0F1A00360EF1 /* Info.plist */,
 				9752F88B23FB0F4100360EF1 /* Features.swift */,
-				9742B7B523FC4E1200ADFC05 /* AboutVC.swift */,
 				9742B7B723FC783300ADFC05 /* Score.swift */,
-				970C569F23FD28E50009B0F3 /* MultiPlayerVC.swift */,
 				970C56A123FDB41B0009B0F3 /* Extensions.swift */,
 			);
 			path = Predict;
