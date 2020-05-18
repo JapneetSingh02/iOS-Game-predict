@@ -2,8 +2,8 @@
 //  Extensions.swift
 //  Predict
 //
-//  Created by Japneet Singhl on 19/02/20.
-//  Copyright © 2020 Japneet Singhl. All rights reserved.
+//  Created by Japneet Singh on 19/02/20.
+//  Copyright © 2020 Japneet Singh. All rights reserved.
 //
 
 import UIKit

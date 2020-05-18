@@ -3,7 +3,7 @@
 //  Predict
 //
 //  Created by Japneet Singh on 19/02/20.
-//  Copyright © 2020 Japneet Singhl. All rights reserved.
+//  Copyright © 2020 Japneet Singh. All rights reserved.
 //
 
 import UIKit
