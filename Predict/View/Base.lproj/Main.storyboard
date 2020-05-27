@@ -168,7 +168,7 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="JR8-cY-hFJ">
-                                <rect key="frame" x="15" y="57.333333333333343" width="50" height="50.000000000000057"/>
+                                <rect key="frame" x="15" y="57.333333333333343" width="50" height="50"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Prediction" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Usq-88-PxL">
                                 <rect key="frame" x="121.66666666666667" y="599.33333333333337" width="170.66666666666663" height="32.666666666666629"/>
@@ -282,7 +282,7 @@
                                     <constraint firstAttribute="height" constant="484" id="KFM-ul-eKW"/>
                                     <constraint firstAttribute="width" constant="339" id="Xvg-mk-MJG"/>
                                 </constraints>
-                                <string key="text">This application is a fun way to increase you concentration power and let the users enjoy with their friends to check who predicts the best.  OS Compatibility: iOS 13.0 and above.  Device Compatibility: iPhone 6 and above.  Country/ Region:= Canada.  Developer: JSK, Inc.  Version 1.0.0. Copyrigt 2020, All rights reserved.</string>
+                                <mutableString key="text">This application is a fun way to increase you concentration power and let the users enjoy with their friends to check who predicts the best.  OS Compatibility: iOS 13.0 and above.  Device Compatibility: iPhone 6 and above.  Country/ Region: Canada.  Developer: JS, Inc.  Version 1.0.0. Copyrigt 2020, All rights reserved.</mutableString>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
